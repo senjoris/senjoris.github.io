@@ -1,0 +1,442 @@
+@import "https://fonts.googleapis.com/css2?family=Ubuntu&display=swap";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background: white;
+}
+
+::-webkit-scrollbar-thumb {
+	background: yellow;
+
+	&:hover {
+		background: black;
+		transition: 0.5s;
+	}
+}
+
+html {
+	-webkit-tap-highlight-color: yellow;
+	font-family: "Ubuntu";
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+
+	body {
+		margin: 0;
+		padding: 0;
+		overflow-x: hidden;
+
+		header {
+			position: fixed;
+			display: flex;
+			justify-content: space-between;
+			background-color: yellow;
+			padding: 10px 10px 10px 10px;
+			width: 100vw;
+
+			.senjorisnav {
+				font-weight: 1000;
+				font-size: larger;
+				color: black;
+				text-decoration-line: none;
+			}
+
+			ul {
+				display: flex;
+				margin: 0 5%;
+
+				@media screen and (max-width: 800px) {
+					margin: 0 14%;
+				}
+
+				li {
+					margin: 2% 5%;
+					list-style: none;
+					font-size: 1em;
+
+					@media screen and (max-width: 800px) {
+						margin: 2% 4%;
+					}
+
+					&:hover {
+						text-decoration: underline;
+					}
+
+					a {
+						background-color: rgb(255, 255, 255);
+						padding: 2px 5px;
+						border-radius: 8px;
+						color: black;
+						text-decoration: none;
+
+						&:hover {
+							background-color: black;
+							color: white;
+							transition: 0.5s;
+							text-decoration: none;
+						}
+
+						@media screen and (max-width: 800px) {
+							margin: 0%;
+						}
+					}
+				}
+			}
+		}
+
+		.landingpage {
+			display: flex;
+			height: 100vh;
+
+			@media screen and (max-width: 800px) {
+				display: inline-table;
+			}
+
+			.lptextbox {
+				margin: 15% 10% 0 15%;
+
+				@media screen and (max-width: 800px) {
+					margin: 38% 10% 0 15%;
+				}
+
+				.lpt1 {
+					font-size: 8vw;
+					color: black;
+					text-decoration: underline;
+					text-decoration-color: yellow;
+					margin-bottom: 3%;
+
+					@media screen and (max-width: 800px) {
+						font-size: 20vw;
+					}
+				}
+
+				.lpt2 {
+					font-size: 3.5vw;
+					color: black;
+
+					@media screen and (max-width: 800px) {
+						font-size: 9vw;
+					}
+				}
+			}
+
+			.lpp1 {
+				height: 30vw;
+				width: auto;
+				border-radius: 50px;
+				margin: 8% 0;
+
+				@media screen and (max-width: 800px) {
+					width: 60%;
+					height: auto;
+					margin: 20% 20%;
+				}
+			}
+
+			.ScrollIndicator {
+				position: absolute;
+				top: 85%;
+				left: 50%;
+				transform: translate(-50%);
+
+				@media screen and (max-width: 800px) {
+					top: 85%;
+				}
+
+				span {
+					width: 25px;
+					height: 25px;
+					display: block;
+					border-right: 3px solid black;
+					border-bottom: 3px solid black;
+					transform: rotate(45deg);
+					margin: -10px;
+					animation: animateScrollIndicator 2s infinite;
+				}
+
+				span:nth-child(2) {
+					animation-delay: -0.2s;
+				}
+
+				span:nth-child(3) {
+					animation-delay: -0.4s;
+				}
+			}
+
+			@keyframes animateScrollIndicator {
+				0% {
+					opacity: 0;
+				}
+				50% {
+					opacity: 1;
+					transform: rotate(45deg) translate(10px, 10px);
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+		}
+
+		.Senjoris2 {
+			height: 70vh;
+			padding: 15vh 0;
+			display: flex;
+			justify-content: center;
+
+			@media screen and (max-width: 800px) {
+				display: block;
+			}
+
+			.s2p1 {
+				height: 75vh;
+				border-radius: 50px;
+
+				@media screen and (max-width: 800px) {
+					width: 75vw;
+					height: auto;
+					margin: -5vh 12.5vw;
+				}
+			}
+
+			.s2textbox {
+				margin: 6% 0% 0% 15%;
+
+				@media screen and (max-width: 800px) {
+					margin: 20% 12% 0% 12%;
+					height: auto;
+					text-align: center;
+				}
+
+				.s2t0 {
+					font-size: 3em;
+					text-decoration: underline;
+					text-decoration-color: yellow;
+
+					@media screen and (max-width: 800px) {
+						font-size: 2em;
+					}
+				}
+
+				.s2t1 {
+					margin: 20px 0 0 0;
+					font-size: 2em;
+					font-style: italic;
+
+					@media screen and (max-width: 800px) {
+						font-size: 1.4em;
+					}
+				}
+
+				.s2t2 {
+					margin: 20px 0 0 0;
+					font-size: 2em;
+					font-style: italic;
+
+					@media screen and (max-width: 800px) {
+						font-size: 1.4em;
+					}
+				}
+
+				.s2t3 {
+					margin: 20px 0 0 0;
+					font-size: 2em;
+					font-style: italic;
+
+					@media screen and (max-width: 800px) {
+						font-size: 1.4em;
+					}
+				}
+			}
+		}
+
+		.Senjoris3 {
+			height: 70vh;
+			padding: 15vh 0;
+			display: flex;
+			justify-content: center;
+
+			@media screen and (max-width: 800px) {
+				display: inline-table;
+			}
+
+			.s3textbox {
+				margin: 10% 20% 0% 0%;
+
+				@media screen and (max-width: 800px) {
+					margin: -8% 12% 0% 12%;
+					height: auto;
+					text-align: center;
+				}
+
+				.s3t0 {
+					font-size: 3em;
+					text-decoration: underline;
+					text-decoration-color: yellow;
+				}
+
+				.s3t1 {
+					margin: 20px 0 0 0;
+					font-size: 2em;
+					font-style: italic;
+
+					@media screen and (max-width: 800px) {
+						font-size: 1.4em;
+					}
+				}
+			}
+
+			.s3p1 {
+				height: 75vh;
+				border-radius: 50px;
+
+				@media screen and (max-width: 800px) {
+					width: 75vw;
+					height: auto;
+					margin: 10vh 12.5vw;
+				}
+			}
+		}
+
+		.Senjoris4 {
+			height: 70vh;
+			padding: 15vh 0;
+			display: flex;
+			justify-content: center;
+
+			@media screen and (max-width: 800px) {
+				display: inline-table;
+				padding: 15vh 0 0 0;
+			}
+
+			.s4p1 {
+				height: 75vh;
+				border-radius: 50px;
+
+				@media screen and (max-width: 800px) {
+					width: 75vw;
+					height: auto;
+					margin: -2vh 12.5vw 0 12.5vw;
+				}
+			}
+
+			.s4textbox {
+				margin: 10% 0% 0% 15%;
+
+				@media screen and (max-width: 800px) {
+					margin: 10% 12% 0% 12%;
+					height: auto;
+					text-align: center;
+				}
+
+				.s4t0 {
+					font-size: 3em;
+					text-decoration: underline;
+					text-decoration-color: yellow;
+
+					@media screen and (max-width: 800px) {
+						font-size: 2em;
+					}
+				}
+
+				.s4t1 {
+					margin: 20px 0 0 0;
+					font-size: 2em;
+					font-style: italic;
+
+					@media screen and (max-width: 800px) {
+						font-size: 1.4em;
+					}
+				}
+
+				.s4t2 {
+					margin: 20px 0 0 0;
+					font-size: 2em;
+					font-style: italic;
+
+					@media screen and (max-width: 800px) {
+						font-size: 1.4em;
+					}
+				}
+			}
+		}
+
+		.Senjoris5 {
+			height: 70vh;
+			padding: 15vh 0;
+			display: flex;
+			justify-content: center;
+
+			@media screen and (max-width: 800px) {
+				display: inline-table;
+				padding: 10vh 0;
+			}
+
+			.s5textbox {
+				margin: 10% 15% 0% 0%;
+
+				@media screen and (max-width: 800px) {
+					margin: 20% 12% 0% 12%;
+					height: auto;
+					text-align: center;
+				}
+
+				.s5t0 {
+					font-size: 2.5em;
+				}
+
+				.s5b1 {
+					text-align: center;
+					display: block;
+					margin: 10% 0 0 0;
+					padding: 2%;
+					font-size: 1.5em;
+					text-decoration: none;
+					color: black;
+					background-color: yellow;
+					border-radius: 50px;
+
+					&:hover {
+						background-color: black;
+						color: white;
+						transition: 0.5s;
+					}
+				}
+			}
+
+			.s5v1 {
+				height: 60vh;
+				border-radius: 50px;
+
+				@media screen and (max-width: 800px) {
+					display: block;
+					height: auto;
+					width: 75vw;
+					margin: 100px 12.5vw 0 12.5vw;
+					border-radius: 20px;
+				}
+			}
+		}
+
+		footer {
+			background-color: black;
+
+			a {
+				text-decoration: none;
+
+				.footertext {
+					color: white;
+					font-size: 1.5em;
+					padding: 10px;
+				}
+			}
+		}
+	}
+}
